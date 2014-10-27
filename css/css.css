@@ -1,0 +1,358 @@
+/* Globals */
+*{
+						outline: none;
+						text-decoration: none;
+}
+html, body {					
+						background: url(../images/bg.png) #050505 fixed;
+						margin: 0px;
+						padding: 0px;
+						color: #050505;
+						font-family: Cabin, Segoe UI;
+						height: 100%;
+						font-size: 10pt;
+}	
+h1{
+						color: #ffffff;
+						font-size: 13pt;
+						font-weight: normal;
+						letter-spacing: 6px;
+						margin: 0px;
+						padding: 0px 0px 0px 30px;
+						display: inline-block;
+}
+h2{
+						color: #999999;
+						font-size: 12pt;
+						letter-spacing: 8px;
+						margin: 0px;
+						padding: 0px 0px 0px 30px;
+						margin: 60px 0px 10px 0px;
+}
+h3{
+						color: #000000;
+						font-size: 10pt;
+						margin: 0px;
+						padding: 0px 0px 0px 30px;
+						margin: 30px 0px 0px 0px;
+}
+
+p{
+						padding: 12px 50px 12px 50px;
+						margin: 0px;
+						font-size: 10pt;
+						color: #111111;
+						word-spacing: 2px;
+						line-height: 18px;
+}
+a{
+						font-weight: bold;
+						color: #333333;
+}
+a:hover{
+						color: #a1cca1;
+}
+
+/* Main Containers */
+#wrapper{
+						width: 100%;
+						float: left;
+						text-align: center;
+						margin: 0px;
+						padding: 0px;
+						height: 100%;
+}	
+#container{
+						width: 1200px;
+						display: inline-block;
+						background: url(../images/stripe.gif) repeat-y #ffffff;
+						background-position: 296px 0px; /* Stripe is 4px wide */
+						min-height: 100%;
+						height: auto !important;
+						height: 100%;
+						margin-bottom: -104px; /* Fix for inline-block messed up margins + footer size */	
+}
+#left{
+						width: 300px;
+						float: left;
+						display: block;
+						position: fixed;
+}
+#right{
+						width: 900px;
+						float: right;	
+						text-align: center;		
+}
+#logo{
+						width: 300px;
+						height: 300px;
+						display: block;
+						background: url(../images/logo.png) no-repeat;
+						float: left;
+}
+#logo:hover{
+						opacity: 0.7;
+}
+#nav_container{
+						width: 300px;
+						float: left;
+						display: block;
+}
+#content_container{
+						display: inline-block;
+						width: 850px;
+						margin: 35px 0px 20px 0px;	
+}
+#footer_container{
+						height: 100px;
+						width: 100%;
+						float: left;
+						z-index: 2;
+						position: relative;
+						text-align: center;
+}
+#pad{
+						height: 100px;
+						display: block;
+						width: 100%;
+						float: left;
+
+}
+
+/* Nav */
+.nav_block{	
+						height: 100%;
+						width: 100%;
+						margin: 0px auto;
+						display: block;
+						float: left;
+						margin: 20px 0px 20px 0px;
+}	
+ul.nav_block {
+	padding: 0;
+	margin: 0;
+}
+ul.nav_block li{
+						list-style: none;
+						float: left;
+}
+ul.nav_block li.nav_item{
+						display: block;
+						float: left;
+						width: 100%;
+						font-size: 11pt;
+						text-align: right;
+						direction: rtl;
+						height: 32px;
+						line-height: 32px;
+						
+}
+ul.nav_block li.nav_item a{
+						color: #777;
+						width: 100%;
+						display: block;
+						text-indent: 30px;	
+						float: left;
+}
+ul.nav_block li.nav_item a:hover, ul.nav_block li.nav_item a.active{
+						color: #000000;
+						text-indent: 20px;
+}
+
+#slider
+{
+	height: 32px;
+	width: 5px;
+	background: url(../images/nav_indicator.gif) repeat-y top right;
+	float: right;
+	margin-top: -1000px;
+}
+
+/* Content  */
+.title{
+						width: 100%;
+						height: 60px;
+						line-height: 60px;
+						background: #333333;
+						display: block;
+						float: left;
+						text-align: left;
+						margin-bottom: 4px;	
+}
+h1.green{
+						color: #a1cca1;
+						float: right;
+						display: inline-block;
+						padding: 0px 30px 0px 0px;
+}
+#c_left{
+						width: 600px;
+						float: left;
+						display: block;
+						text-align: left;
+}
+.c-left-expanded {
+	width: 850px !important;
+}
+#c_right{
+						width: 250px;
+						height: 300px;
+						float: left;
+						display: block;
+}
+#news_block{
+						width: 100%;
+						height: 250px;
+						float: left;
+						display: block;
+						background: #a1cca1;
+						margin-bottom: 4px;
+}
+.news_title{
+						color: #0e3e0e;
+						font-size: 10pt;
+						padding: 30px 30px 5px 10px;
+						text-align: right;
+
+}
+p.news_content{
+
+						color: #0e3e0e;
+						text-align: right;
+						padding: 12px 30px 12px 30px;
+						margin: 0px;
+						font-size: 9pt;
+						color: #111111;
+						word-spacing: 1px;
+						line-height: 20px;
+						overflow: hidden;
+						height: 118px;
+						margin-bottom: 25px;
+}
+
+#image_block{
+						width: 100%;
+						height: 250px;
+						float: left;
+						display: block;
+						background: black;
+						margin-bottom: 4px;		
+						background: url(../images/sample.jpg) center center no-repeat;
+						background-size: cover;
+						overflow: hidden;	
+}
+
+#event_buttons{
+						background: black;
+						height: 32px;
+						width: 100%;
+						color: white;
+						font-size: 24px;
+}
+
+.event_button {
+	color: #aaa;
+	font-size: 24px;
+	height: 32px;
+	width: 40px;
+	background-color: #111;
+}
+
+.event_button:hover {
+	background-color: #333;
+	color: #eee;
+}
+
+#left_button
+{
+	float: left;
+
+}
+
+#right_button 
+{
+	float: right;
+}
+
+/* Footer */
+#footer{
+						width: 1200px;
+						display: inline-block;
+						font-size: 9pt;
+						height: 100%;
+						line-height: 100px;
+}
+
+
+.sponsors {
+	margin-top: 20px;
+	width: 790px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.sponsors-text {
+	width: 790px;
+	font-size: 16pt;	
+	color: #555;
+}
+.sponsor-tile-container {
+	display: block;
+	float: left;
+}
+.sponsor-tile {
+	margin: 10px;
+	float: left;
+	width: 240px;
+	height: 140px;
+	display: inline-block;
+	display: table;
+	background: #f8f8f8;
+	box-shadow: 0px 1px 5px #bbb;
+	font-size: 12pt;
+}
+
+.sponsor-tile-text {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.gallery-image {
+	width: 100%;
+	max-width: 850px;
+}
+
+.gallery-tile {
+	width: 160px;
+	height: 160px;
+	box-sizing: border-box;
+	display: inline-block;
+	float: left;
+	background: #f8f8f8;
+	box-shadow: 0px 1px 5px #bbb;
+	padding: 5px;
+	text-align: center;
+	margin-top: 12px;
+	margin-right: 12px;
+	margin-left: 0px;
+}
+
+
+#gallery-tiles .gallery-tile:nth-child(5n) {
+	margin-right: 0px;
+}
+
+#gallery-tiles .gallery-tile.image {
+	background-size: cover;
+	background-position: center center;
+padding: 0;
+}
+
+.gallery-tile.image a {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+float: left;
+}

@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<!-- Content -->
+<div class="title">
+  <h1>News</h1>
+  <h1 class="green">Events</h1>
+</div>
+<div id="c_left"> <!-- Left Column -->
+
+  {% for post in site.posts limit:1 %}
+  <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+  {{ post.content }}
+  {% endfor %}
+  <h2>Other Recent News</h2>
+  {% for post in site.posts offset:1 %}
+  <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+
+  {{ post.content }}
+
+  {% endfor %}
+
+</div>
+<div id ="c_right"> <!-- Right Column -->
+  <div id="news_block">
+
+    <div class="news_item">
+      <div class="news_title">
+        <b>IOI2014</b><br /><i>13-07-2014 - 20-07-2014</i>
+      </div>
+      <p class="news_content">
+      The IOI2014 will be hosted by and held in Taipei, Taiwan!
+      </p>
+    </div>
+
+    <div id="event_buttons" style="display: none;" >
+      <div class="event_button" id="left_button">
+        &lt;
+      </div>
+      <div class="event_button" id="right_button">
+        &gt;
+      </div>
+    </div>
+  </div>
+
+  <div class="title">
+    <h1 class="green">Gallery</h1>
+  </div>
+
+  <div id="image_block">
+  </div>
+</div>

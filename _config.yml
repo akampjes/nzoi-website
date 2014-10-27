@@ -1,0 +1,13 @@
+# Site settings
+title: NZ Olympiad in Informatics
+email: contact@nzoi.org.nz
+description: > # this means to ignore newlines until "baseurl:"
+  NZOI is the New Zealand Informations Olympiad.
+  Our Mission is to select, train and send students to the
+  International Olympiad in Informatics and to foster informatics and
+  programming in high schools across New Zealand.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://nzoi.org.nz" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown

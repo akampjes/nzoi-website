@@ -1,0 +1,52 @@
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="{{ site.description }}">
+
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<link rel="shortcut icon" type="image/ico" href="/images/favicon.ico" />
+<link rel="stylesheet" href="/css/cabin.css" type="text/css">
+<link rel="stylesheet" href="/css/css.css" type="text/css" media="screen">
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>
+var page = "Home";
+
+
+$(document).ready(function() {
+    var selected = 0;
+    var numNavs = $('li.nav_item').length;
+    var max = -(($(".nav_block li.nav_item").length) * 32);
+
+
+    console.log("Current page is:", page);
+    $("#nav_container > .nav_block > .nav_item").each(function() {
+      if($(this).text() == page)
+      {
+      $(this).addClass("active");
+      selected = ($("#nav_container li").index(this)) * 32;
+      console.log("selected=", selected);
+      var newPos = max + selected;
+      console.log("StartPos:", newPos);
+      $("#slider").stop().animate({"margin-top": newPos}, 1000);
+      }
+      });
+
+    console.log("there are " + numNavs + "  nav items");
+    $('.nav_item').each(function() {
+      $(this).hover(function() {
+        var index = $('#nav_container li').index(this);
+        var pos = max + ((index) * 32);
+        $('#slider').stop().animate({'margin-top': pos}, 100);
+        }, function() {
+        $('#slider').stop().animate({'margin-top': max + selected}, 100);
+        });
+      });
+});
+
+</script>
+</head>
+
